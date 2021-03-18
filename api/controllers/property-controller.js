@@ -10,12 +10,24 @@ export class PropertyController {
             {
                 "id": "temperature",
                 "name": "Office Temperature Sensor",
-                "value": JSON.parse(JSON.stringify(temperature))
+                "value": JSON.parse(JSON.stringify(temperature)),
+                "links": {
+                    "temperature": {
+                        "link": "temperature/",
+                        "title": "The current temperature."
+                    }
+                }
             },
             {
                 "id": "humidity",
                 "name": "Office Humidity Sensor",
-                "value": JSON.parse(JSON.stringify(humidity))
+                "value": JSON.parse(JSON.stringify(humidity)),
+                "links": {
+                    "humidity": {
+                        "link": "humidity/",
+                        "title": "The current humidity."
+                    }
+                }
             }
         ])
     }
