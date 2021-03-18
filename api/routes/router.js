@@ -1,9 +1,9 @@
 import express from 'express'
 import createError from 'http-errors'
-import { router as v1Router } from './api/v1/router.js'
+import { router as lilOpyIVRouter } from './things/lil-opy-iv/router.js'
 
 export const router = express.Router()
 
-router.use('/api/v1/lil-opy-iv', v1Router)
+router.use('/things/lil-opy-iv/', lilOpyIVRouter)
 
 router.use('*', (req, res, next) => next(createError(404)))
