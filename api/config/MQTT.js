@@ -10,7 +10,7 @@ export const setup = () => {
         client.subscribe(process.env.SUB_TOPIC)
     })
 
-    client.on('message', async (topic, message) => {
+    client.on('message', (topic, message) => {
         // message is Buffer
         const data = JSON.parse(message.toString())
         console.log(topic)
