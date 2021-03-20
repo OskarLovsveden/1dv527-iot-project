@@ -26,6 +26,15 @@
     font-size: 2em;
 }
 
+.smallerP {
+    font-size: 1em;
+}
+
 .largeP {
     font-size: 3em;
+}
+
+.link {
+    margin-top: 1em;
+    text-decoration: none;
 }
