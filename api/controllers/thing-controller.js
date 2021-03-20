@@ -10,7 +10,7 @@ export class ThingController {
             ],
             "links": {
                 "properties": {
-                    "link": "properties/",
+                    "link": `${req.protocol}://${req.get('host')}${req.originalUrl}/properties`,
                     "title": "Properties of Lil' Opy IV."
                 },
                 "product": {
@@ -18,7 +18,7 @@ export class ThingController {
                     "title": "Product of this Web Thing."
                 },
                 "ui": {
-                    "link": "ui/",
+                    "link": process.env.UI_URL,
                     "title": "User Interface"
                 }
             }

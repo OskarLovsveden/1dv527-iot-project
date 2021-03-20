@@ -13,7 +13,7 @@ export class PropertyController {
                 "value": JSON.parse(JSON.stringify(temperature)),
                 "links": {
                     "temperature": {
-                        "link": "temperature/",
+                        "link": `${req.protocol}://${req.get('host')}${req.originalUrl}/temperature`,
                         "title": "The current temperature."
                     }
                 }
@@ -24,7 +24,7 @@ export class PropertyController {
                 "value": JSON.parse(JSON.stringify(humidity)),
                 "links": {
                     "humidity": {
-                        "link": "humidity/",
+                        "link": `${req.protocol}://${req.get('host')}${req.originalUrl}/humidity`,
                         "title": "The current humidity."
                     }
                 }
