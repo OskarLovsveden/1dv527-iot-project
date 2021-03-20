@@ -13,8 +13,6 @@ export const setup = () => {
     client.on('message', (topic, message) => {
         // message is Buffer
         const data = JSON.parse(message.toString())
-        console.log(topic)
-        console.log(data)
 
         // Save
         const h = new Humidity({
@@ -28,7 +26,5 @@ export const setup = () => {
             value: data.dht11.Temperature
         })
         t.save()
-
-        // client.end()
     })
 }

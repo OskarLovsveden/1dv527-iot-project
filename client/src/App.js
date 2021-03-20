@@ -8,7 +8,6 @@ const App = () => {
   useEffect(() => {
     const fetchValues = async () => {
       const res = await axios(process.env.REACT_APP_THING_URL + '/properties')
-      console.log(res.data)
       setData(res.data)
     }
 
