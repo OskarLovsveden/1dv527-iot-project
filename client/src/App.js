@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <div className="flexCenterColumn">
-      <div className="flexCenterRow">
+      <div className="propertiesCells">
         {data.map(p => {
           const props = {
             name: p.id,

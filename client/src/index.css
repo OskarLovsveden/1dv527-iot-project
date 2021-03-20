@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.flexCenterRow {
+.propertiesCells {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +22,12 @@
     margin: 0.1em;
 }
 
+@media screen and (max-width: 600px) {
+        .propertiesCells {
+            flex-direction: column;
+        }
+  }
+
 .smallP {
     font-size: 2em;
 }
@@ -32,6 +38,7 @@
 
 .largeP {
     font-size: 3em;
+    margin-bottom: auto;
 }
 
 .link {
