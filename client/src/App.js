@@ -7,7 +7,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchValues = async () => {
-      const res = await axios('http://localhost:8000/things/lil-opy-iv/properties')
+      const res = await axios(process.env.REACT_APP_THING_URL + '/properties')
       console.log(res.data)
       setData(res.data)
     }
@@ -24,11 +24,19 @@ const App = () => {
   return (
     <div className="flexCenterColumn">
       <div className="flexCenterRow">
-        {data.map(p => (
-          <SensorValue key={p.id} name={p.id} value={p.value.value} unit={p.value.unitSymbol} />
-        ))}
+        {data.map(p => {
+          const props = {
+            name: p.id,
+            value: p.value.value,
+            unit: p.value.unitSymbol,
+            timestamp: p.value.timestamp
+          }
+
+          return <SensorValue key={p.id} {...props} />
+        })}
       </div>
       <div className="flexCenterColumn">
+        <a href={process.env.REACT_APP_THING_URL} className="largeP link">Thing API</a>
       </div>
     </div >
   )
