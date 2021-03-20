@@ -1,0 +1,31 @@
+* {
+    font: 1em sans-serif;
+}
+
+.flexCenterColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexCenterRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sensor {
+    min-width: 15em;
+    border: solid black 1px;
+    border-radius: 0.1em;
+    margin: 0.1em;
+}
+
+.smallP {
+    font-size: 2em;
+}
+
+.largeP {
+    font-size: 3em;
+}
