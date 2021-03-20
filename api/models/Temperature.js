@@ -12,8 +12,11 @@ const schema = new Schema({
     toJSON: {
         transform: function (doc, ret) {
             delete ret._id
+
             ret.timestamp = ret.createdAt
             delete ret.createdAt
+
+            ret.unitSymbol = '°'
         }
     }
 })
