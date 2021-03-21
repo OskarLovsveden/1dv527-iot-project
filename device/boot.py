@@ -1,5 +1,3 @@
-# boot.py -- run on boot-up
-
 from network import WLAN
 import machine
 import json

@@ -34,7 +34,8 @@ Describe the thing and how it works.
 
 ### Functionality
 
-- [Public URL to the ](#addyourURLhere)
+- [TD API](#addyourURLhere)
+- [Thing UI](#addyourURLhere)
 - [URL to recording](#addyourURLhere)
 
 If possible we want a public url to visit to check the IoT-thing.

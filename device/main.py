@@ -42,7 +42,4 @@ while True:
                 '{"Temperature": ' + str(result.temperature) +
                 ', "Humidity": ' + str(result.humidity) + '}}')
 
-    # pybytes.send_signal(1,result.temperature)
-    # pybytes.send_signal(2,result.humidity)
-
-    time.sleep(30)
+    time.sleep(60)
